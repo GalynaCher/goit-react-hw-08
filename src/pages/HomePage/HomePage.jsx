@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-// import svgIcons from "../../img/icons/user-member-avatar-people-image-photo.svg";
-// import svgIcons1 from "../../img/icons/symbol-defs.svg" 
 import css from "./HomePage.module.css";
 
 function HomePage() {
+
     return (
         <div className={css.homeDiv}>
             {/* <h2 className={css.homeWelcome}>Welcome!</h2> */}

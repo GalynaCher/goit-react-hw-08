@@ -21,7 +21,9 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
+a:hover,
+a:active,
+a:focus {
   color: #9c27b0;
   /* box-shadow: (2px 2px 4px rgba(0, 0, 0, 0.5)); */
 }
