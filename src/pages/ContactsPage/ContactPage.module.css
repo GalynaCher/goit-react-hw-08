@@ -1,0 +1,10 @@
+.contactPageDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contactPageH2 {
+    color: #9c27b0;
+}
