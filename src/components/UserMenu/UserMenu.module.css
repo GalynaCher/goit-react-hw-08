@@ -1,6 +1,10 @@
 .divLogout {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     color: #155ba0;
+}
+
+.icon {
+    font-size: x-large;
 }

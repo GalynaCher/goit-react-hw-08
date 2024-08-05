@@ -45,7 +45,7 @@ function App() {
                 <Route path="/contacts"
                   element={<PrivateRoute component={ <ContactsPage />} redirectTo="/" />} />
             </Routes>
-            <Toaster position='bottom-center'/>
+            <Toaster position='bottom-right'/>
         {/* </Suspense> */}
       </Layout> 
     </>  

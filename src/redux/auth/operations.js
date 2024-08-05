@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
@@ -11,10 +12,8 @@ const setAuthHeaderToken = (token) => {
 export const register = createAsyncThunk("auth/register", async (newUser, thunkAPI) => {
     try {
         const response = await axios.post("/users/signup", newUser);
-
         // axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;   
         setAuthHeaderToken(response.data.token);
-
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -27,12 +26,11 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
     console.log("operation login - user>>", user);
     try {
         const response = await axios.post("/users/login", user);
-
         // axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`; 
         setAuthHeaderToken(response.data.token);
-
         return response.data;
     } catch (error) {
+        toast.error('Login failed. Please try again.');
         return thunkAPI.rejectWithValue(error.message);
         
     }
